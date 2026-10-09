@@ -44,7 +44,7 @@ Medición con `explain("executionStats")` sobre **500.000 viajes sintéticos** (
 
 - [x] `01_carga.js` ejecutado (carga de las 7 colecciones con validadores e índices)
 - [x] `03_medir_rendimiento.js` ejecutado, resultados arriba
-- [ ] `02_consultas.js` ejecutado, pero sin salida impresa todavía: falta mostrar los resultados de cada consulta
+- [x] `02_consultas.js` ejecutado: las 10 consultas corren sin errores, incluidos `$geoIntersects` con LineString y `$centerSphere`. Como las coordenadas son placeholders, las distancias y las intersecciones (R7) no tienen significado real, y la duración promedio de los cortes (R6) surge de un supuesto de fin de día
 - [ ] Backup y restauración probados
 - [ ] Coordenadas reales (OpenStreetMap `highway=cycleway`, GBFS de biciTRAN)
 
