@@ -34,7 +34,7 @@ db.createCollection("cortes_calle", { validator: { $and: [
       tipo_restriccion: { enum: ["total","media_calzada","un_carril","sin_estacionamiento"] },
       trazado: { bsonType: "object", required: ["type","coordinates"],
                  properties: { type: { enum: ["LineString","Point"] } } },
-      fechaInicio: { bsonType: "date" }, fechaFin: { bsonType: "date" }, expiraEn: { bsonType: "date" } } } } ],
+      fechaInicio: { bsonType: "date" }, fechaFin: { bsonType: "date" }, expiraEn: { bsonType: "date" } } } } ] },
   validationLevel: "strict", validationAction: "error" });
 db.createCollection("bicicleterias", { validator: { $jsonSchema: { bsonType: "object",
   required: ["nombre","servicios","ubicacion"],
