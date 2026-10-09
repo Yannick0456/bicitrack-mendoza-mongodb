@@ -105,7 +105,7 @@ db.zonas_estacionamiento.insertMany([
 // ---------- cortes (parte 18/06/2026 y 24/06/2026; fechaFin = fin del dia: SUPUESTO, la fuente no da fin) ----------
 const dia = (d, h="08:30") => ISODate(`2026-06-${d}T${h}:00-03:00`);
 const fin = d => ISODate(`2026-06-${d}T23:59:59-03:00`);
-const exp = d => ISODate(`2026-07-${d}T00:00:00-03:00`);
+const exp = d => ISODate(`2030-06-${d}T00:00:00-03:00`);   // futuro a proposito: si no, el TTL borra los cortes al crearlos
 const corte = (calle, d, h, ddia, tipo, motivo, nota, fuente) => ({ calle, tramo_desde: d, tramo_hasta: h,
   tipo_restriccion: tipo, motivo, fechaInicio: dia(ddia), fechaFin: fin(ddia), expiraEn: exp(ddia),
   desvio: null, observacion: nota, trazado: linea(), coordenadas: COORD,
